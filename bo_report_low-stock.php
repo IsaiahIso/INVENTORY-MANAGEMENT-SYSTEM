@@ -1,6 +1,6 @@
 <?php
 session_start();
-if (!isset($_SESSION['user_id']) || $_SESSION['user_account'] !== 'inventory_manager') {
+if (!isset($_SESSION['user_id']) || $_SESSION['user_account'] !== 'business_owner') {
     header("Location: login.php");
     exit;
 }

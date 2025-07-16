@@ -25,7 +25,7 @@ if (!isset($_SESSION['user_id']) || $_SESSION['user_account'] !== 'business_owne
             <li><a href="bo_report_products.php">📦 Product Report</a></li>
             <li><a href="bo_report_users.php">👥 User Report</a></li>
             <li><a href="bo_report_suppliers.php">🚚 Supplier Report</a></li>
-            <li><a href="bo_report_low_stock.php">⚠️ Low Stock Report</a></li>
+            <li><a href="bo_report_low-stock.php">⚠️ Low Stock Report</a></li>
             <li><a href="bo_report_stock_summary.php">📊 Stock Summary</a></li>
             <li><a href="bo_report_roles.php">🧑‍💼 Role Breakdown Report</a></li>
         </ul>

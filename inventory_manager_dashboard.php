@@ -53,4 +53,4 @@ $category_count = $category_query->fetch_assoc()['total_categories'] ?? 0;
 </div>
 </div>
 </body>
-</html>
+</html> 

@@ -118,8 +118,18 @@ form button:hover {
     color: #7b2cbf;
     text-decoration: none;
 }
- 
-
+ .password-wrapper {
+            position: relative;
+        }
+        .toggle-password {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            font-size: 18px;
+            user-select: none;
+        }
  .dashboard-wrapper {
     width: 100%;
     max-width: 1000px;

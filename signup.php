@@ -44,7 +44,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <input type="text" name="first_name" placeholder="First Name" required>
                     <input type="text" name="last_name" placeholder="Last Name" required>
                     <input type="email" name="email" placeholder="Email Address" required>
-                    <input type="password" name="password" placeholder="Password" required>
+
+                    <div class="password-wrapper">
+                        <input type="password" id="password" name="password" placeholder="Password" required>
+                        <span class="toggle-password" onclick="togglePassword()">👁️</span>
+                    </div>
 
                     <select name="user_account" required>
                         <option value="">Select User Type</option>
@@ -60,5 +64,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </div>
         </div>
     </div>
+
+    <script>
+        function togglePassword() {
+            const input = document.getElementById("password");
+            const icon = document.querySelector(".toggle-password");
+            const isPassword = input.type === "password";
+
+            input.type = isPassword ? "text" : "password";
+            icon.textContent = isPassword ? "🙈" : "👁️";
+        }
+    </script>
 </body>
 </html>

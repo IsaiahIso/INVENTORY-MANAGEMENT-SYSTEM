@@ -62,7 +62,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                 <form method="POST">
                     <input type="email" name="email" placeholder="Email Address" required>
-                    <input type="password" name="password" placeholder="Password" required>
+                    <div class="password-wrapper">
+                        <input type="password" id="password" name="password" placeholder="Password" required>
+                        <span class="toggle-password" onclick="togglePassword()">👁️</span>
+                    </div>
                     <button type="submit">Login</button>
                 </form>
 
@@ -70,5 +73,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </div>
         </div>
     </div>
+
+     <script>
+        function togglePassword() {
+            const input = document.getElementById("password");
+            const icon = document.querySelector(".toggle-password");
+            const isPassword = input.type === "password";
+
+            input.type = isPassword ? "text" : "password";
+            icon.textContent = isPassword ? "🙈" : "👁️";
+        }
+    </script>
 </body>
 </html>
